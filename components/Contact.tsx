@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section
       id="contatti"
-      style={{ padding: "96px 24px", background: "#0a0a0a" }}
+      style={{ padding: "96px 24px", background: "#ffffff" }}
     >
       <div style={{ maxWidth: 1000, margin: "0 auto" }}>
         {/* Header */}
@@ -14,7 +14,7 @@ export default function Contact() {
               fontSize: 10,
               letterSpacing: "0.4em",
               textTransform: "uppercase",
-              color: "#555",
+              color: "#999",
               marginBottom: 12,
             }}
           >
@@ -26,16 +26,16 @@ export default function Contact() {
               fontSize: "clamp(48px, 8vw, 80px)",
               letterSpacing: "0.12em",
               lineHeight: 1,
-              color: "#fff",
+              color: "#111",
               margin: "0 0 16px",
             }}
           >
             CONTATTI
           </h2>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12 }}>
-            <div style={{ width: 48, height: 1, background: "#333" }} />
-            <div style={{ width: 4, height: 4, background: "#555", transform: "rotate(45deg)" }} />
-            <div style={{ width: 48, height: 1, background: "#333" }} />
+            <div style={{ width: 48, height: 1, background: "#ddd" }} />
+            <div style={{ width: 4, height: 4, background: "#ccc", transform: "rotate(45deg)" }} />
+            <div style={{ width: 48, height: 1, background: "#ddd" }} />
           </div>
         </div>
 
@@ -51,7 +51,7 @@ export default function Contact() {
           {/* Map */}
           <div
             style={{
-              border: "1px solid #1e1e1e",
+              border: "1px solid #e5e5e5",
               overflow: "hidden",
               height: 360,
             }}
@@ -60,7 +60,7 @@ export default function Contact() {
               src="https://maps.google.com/maps?q=Via+delle+Forze+Armate+81+20147+Milano+MI&output=embed"
               width="100%"
               height="100%"
-              style={{ border: "none", filter: "grayscale(100%) invert(90%) contrast(85%)" }}
+              style={{ border: "none", filter: "grayscale(100%) contrast(95%)" }}
               loading="lazy"
               title="Mappa FIRST CUT Barber Shop"
               allowFullScreen
@@ -111,24 +111,24 @@ export default function Contact() {
                 alignItems: "center",
                 gap: 8,
                 padding: "12px 28px",
-                border: "1px solid #333",
-                color: "#888",
+                border: "1px solid #222",
+                color: "#111",
                 fontSize: 11,
                 letterSpacing: "0.25em",
                 textTransform: "uppercase",
                 textDecoration: "none",
                 alignSelf: "flex-start",
-                transition: "border-color 0.2s, color 0.2s",
+                transition: "background 0.2s, color 0.2s",
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLElement
-                el.style.borderColor = "#fff"
+                el.style.background = "#111"
                 el.style.color = "#fff"
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLElement
-                el.style.borderColor = "#333"
-                el.style.color = "#888"
+                el.style.background = "transparent"
+                el.style.color = "#111"
               }}
             >
               <PinIcon size={14} />
@@ -162,13 +162,13 @@ function InfoRow({
 }) {
   const content = (
     <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
-      <div style={{ color: "#555", paddingTop: 2, flexShrink: 0 }}>{icon}</div>
+      <div style={{ color: "#aaa", paddingTop: 2, flexShrink: 0 }}>{icon}</div>
       <div>
-        <p style={{ fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#444", marginBottom: 4 }}>
+        <p style={{ fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#bbb", marginBottom: 4 }}>
           {label}
         </p>
-        <p style={{ fontSize: 15, color: "#ddd", letterSpacing: "0.03em" }}>{value}</p>
-        {sub && <p style={{ fontSize: 13, color: "#555", marginTop: 2 }}>{sub}</p>}
+        <p style={{ fontSize: 15, color: "#111", letterSpacing: "0.03em" }}>{value}</p>
+        {sub && <p style={{ fontSize: 13, color: "#888", marginTop: 2 }}>{sub}</p>}
       </div>
     </div>
   )

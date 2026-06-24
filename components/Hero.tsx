@@ -15,13 +15,25 @@ export default function Hero() {
         background: "#0a0a0a",
       }}
     >
-      {/* Hex grid background */}
+      {/* Hex grid — sharp layer */}
       <div
-        className="hex-grid-bg"
         style={{
           position: "absolute",
           inset: 0,
-          opacity: 0.6,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='52'%3E%3Cpolygon points='30%2C1 59%2C17 59%2C51 30%2C51 1%2C51 1%2C17' fill='none' stroke='%23ffffff' stroke-width='1.5'/%3E%3C%2Fsvg%3E")`,
+          backgroundSize: "60px 52px",
+          opacity: 0.1,
+        }}
+      />
+      {/* Hex grid — blur glow layer */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='52'%3E%3Cpolygon points='30%2C1 59%2C17 59%2C51 30%2C51 1%2C51 1%2C17' fill='none' stroke='%23ffffff' stroke-width='3'/%3E%3C%2Fsvg%3E")`,
+          backgroundSize: "60px 52px",
+          opacity: 0.04,
+          filter: "blur(3px)",
         }}
       />
 
